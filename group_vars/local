@@ -1,0 +1,2 @@
+execute_user: vagrant
+user_home: "/home{{ execute_user }}"
