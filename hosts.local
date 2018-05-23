@@ -4,3 +4,7 @@
 
 [local_es]
 192.168.33.12
+
+[local_web]
+
+[local_api]
