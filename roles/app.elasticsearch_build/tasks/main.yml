@@ -1,0 +1,6 @@
+---
+- name: copy docker file
+  template: src=Dockerfile dest={{ user_home }}/elasticsearch/
+
+- name: build docker image
+  command: docker build -f {{ user_home }}/elasticsearch/Dockerfile

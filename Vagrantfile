@@ -26,6 +26,8 @@ SCRIPT
         node.vm.synced_folder "./", "/home/vagrant/ansible-playbook"        
         node.vm.provision :shell, :inline => script
       end
+      node.ssh.private_key_path = "./vagrant/inseccure_private_key"
+      node.ssh.insert_key = false
     end
   end
 end
