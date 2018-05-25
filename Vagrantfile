@@ -7,6 +7,9 @@ Vagrant.configure("2") do |config|
 
   script = <<SCRIPT
   mkdir -p /home/vagrant/ansible-playbook
+  sudo chmod 600 /home/vagrant/.ssh
+  sudo chmod 700 /home/vagrant/.ssh/authorized_keys
+  sudo cat /home/vagrant/ansible-playbook/vagrant/public_key >> /home/vagrant/.ssh/authorized_keys
   sudo yum -y install epel-release
   sudo yum -y install ansible
 SCRIPT
